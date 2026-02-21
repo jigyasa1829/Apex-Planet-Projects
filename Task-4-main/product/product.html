@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing!</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+         <img src="logo.png">    
+        <p>Your Style, Your Choice - Explore Our Products!</p>
+        </header>
+
+        <div class="sidebar">
+            <div class="filters">
+      <h4>Category</h4>
+      <select id="categoryFilter">
+        <option value="all">All Category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Books">Books</option>
+      </select>
+    </div>
+
+    <div class="filters">
+      <h4>Price</h4>
+      <select id="priceFilter">
+        <option value="all">Any Price</option>
+        <option value="low">Below ₹1000</option>
+        <option value="mid">₹1000 - ₹10000</option>
+        <option value="high">Above ₹10000</option>
+      </select>
+    </div>
+
+    <div class="sort">
+      <h4>Sort By</h4>
+      <select id="sortOption">
+        <option value="none">Relevance</option>
+        <option value="priceLowHigh">Price: Low to High</option>
+        <option value="priceHighLow">Price: High to Low</option>
+        <option value="ratingHighLow">Rating: High to Low</option>
+        <option value="ratingHighLow">Newest First</option>
+        <option value="ratingHighLow">Most Popular</option>
+      </select>
+    </div>
+
+    <div class="searchbar">
+        <form>         
+            <input type="text" placeholder="Search For Products,Styles,Electronic Items, Gadgets, Cosmetics">         
+        </form>
+     </div>
+     <a><i class="ri-shopping-cart-fill  cart"></i></a>
+     <div class="btn">
+        <button>SignUp/Login</button>
+     </div>
+
+    </div>
+
+     <div class="hero">
+        <img src="https://images.ctfassets.net/9htf9uzhsn4z/64h4UNwLOlkxq16uvx6ZA5/a22df740560ba26814b108b8fc9d90c5/lulu-home-hero-2025-proposed-v3.jpg?w=2880&h=960&fm=webp" alt="Hero Image">
+        <div class="hero-overlay">
+            <div class="hero-text">MEGA SALE 50% OFF</div>
+            <div class="hero-subtitle">Limited Time Offer - Shop Now!</div>
+        </div>
+    </div>
+    <div class="products-section">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products-grid" id="productsGrid">
+        </div>
+    </div>
+<script src="product.js"></script>
+
+</body> 
+</html>

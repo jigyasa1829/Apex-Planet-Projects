@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .cart-container {
+      max-width: 600px;
+      margin: auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      background: #f8f8f8;
+      padding: 10px;
+      border-radius: 5px;
+      justify-content: space-between;
+    }
+    li img {
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #cartTotal {
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .btns {
+      margin-top: 15px;
+    }
+    .btns button {
+      margin-right: 10px;
+      background: green;
+    }
+    .btns button:last-child {
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <ul id="cartItems"></ul>
+    <h2 id="cartTotal">Total: ₹0</h2>
+    <div class="btns">
+      <button onclick="clearCart()">Clear Cart</button>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    function renderCart() {
+      const cartItems = document.getElementById("cartItems");
+      const cartTotal = document.getElementById("cartTotal");
+      cartItems.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, index) => {
+        let price = parseFloat(item.price.toString().replace("₹", "").trim());
+        let quantity = item.quantity || 1;
+        total += price * quantity;
+        cartItems.innerHTML += `
+          <li>
+            <div>
+              <img src="${item.image}" width="50" height="50">
+              ${item.name} - ₹${price} × ${quantity}
+            </div>
+            <button onclick="removeItem(${index})">Remove</button>
+          </li>
+        `;
+      });
+      cartTotal.innerText = "Total: ₹" + total;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      localStorage.removeItem("cart");
+      renderCart();
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+      alert("Thank you for your purchase 🎉! Total bill: ₹" + 
+            document.getElementById("cartTotal").innerText.replace("Total: ₹",""));
+      clearCart();
+    }
+    renderCart();
+  </script>
+</body>
+</html>

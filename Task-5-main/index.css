@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body,html{
+    height:100%;
+    width: 100%;
+
+}
+.main{
+    padding:10px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+    padding:10px 20px;
+}
+header img{
+    height:70px;
+}
+header input{
+    padding:10px;
+    width:400px
+}
+.cart, .login,.logo{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+.cart i, .login i,.logo h2{
+    font-size: 30px;;
+    color:rgb(91, 27, 64);
+    font-style: italic;
+}
+.right{
+    display: flex;
+    gap:25px;
+}
+.login button, .cart button{
+    border:none;
+    padding:10px 20px;
+    font-size: 15px;
+    color:rgb(91, 27, 64);
+    font-weight: bold;
+    background-color:rgba(157, 125, 142, 0.4);
+    border-radius: 15px;;
+}
+.cart-link {
+    text-decoration: none;   
+    color: #5A1E3D;          
+    font-size: 18px;       
+    font-weight: bold;
+}
+
+.cart-link:hover {
+    color: #E63946;         
+}
+
+.second{
+    width: 100%;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    gap:25px;
+    border:3px solid transparent;
+    box-shadow: 0 4px 15px rgba(85, 85, 85, 0.2);                                                                                                                                                                                                                                                                                                                      
+}
+.filter{
+    height:100px;
+}
+.second img:hover{
+scale:1.01;
+}
+.cat p{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(84, 14, 55);
+}
+.third{
+    width: 100%;
+    padding: 20px 25px;
+    display:flex ;
+    flex-direction: column;
+    margin-top: 30px;
+    gap:10px;
+    
+}
+.third img{
+ width: 100%;;
+ object-fit: cover;
+}
+.searchInput button{
+    border:none;
+    padding :10px 20px;
+    font-size: 15px;
+    color:rgb(91, 27, 64);
+    font-weight: bold;
+    
+}
+.gridd{
+    object-fit: cover;
+}
+.product{
+    margin-left:40px;
+    width:100%;
+    padding:40px 100px; ;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,1fr)    );
+    row-gap:40px;
+    column-gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.productgrid{
+    margin: auto;
+    width:100%;
+    padding:40px 100px; ;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,1fr)    );
+    row-gap:40px;
+    column-gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    padding: 15px;
+    width:300px;
+    height:500px;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+   position: relative;
+    gap:20px;
+    border:2px solid rgb(181, 174, 174);
+    border-radius: 20px;
+    transition: 0.9 ease-out;
+    
+}
+.card:hover{
+    scale:1.05;
+}
+.card img{
+    margin-top: 10px;
+    height:200px;
+    width:200px;
+}
+.like{
+    display: flex;
+    cursor: pointer;
+}
+.like h2{
+    position: absolute;
+    left: 15px;
+    background-color:rgb(84, 14, 55,0.8);
+    color:white;
+    border: none;
+    border-radius: 15px;
+    padding:2px 7px;
+    font-size: 15px;;
+}
+.like i{
+    position:absolute;
+    right:15px;
+    font-size: 20px;  
+ 
+}
+.card p{
+    font-size: 20px;
+    font-weight:400;
+    color:rgb(84, 14, 55);
+}
+.card h3{
+    color:green;
+}
+h1{
+    background-color:rgb(219, 179, 203,0.4); 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color:rgb(91, 27, 64);
+}
+.add{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(238, 223, 12, 0.6);
+    padding:5px;
+    border-radius: 10px;
+    gap:5px;
+}
+.add button{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(84, 14, 55);
+    cursor: pointer;
+}

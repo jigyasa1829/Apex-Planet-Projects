@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Title</title>
+    <link rel="stylesheet" href="Task_2.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Job Application Form<span class="web">(web)</span></h1>
+            <form>
+                <div class="form">
+                <div class="frms">
+                <label for="name">First Name</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter First Name">
+                </div>
+                 <div class="frms">
+                <label for="lname">Last Name</label><br>
+                <input type="text" id="lname" name="name" placeholder="Enter Last Name">
+                </div>
+                <div class="frms">
+                <label for="email">Email</label><br>
+                <input type="Email" id="email" name="name" placeholder="Enter Email">
+                </div>
+                <div class="frms">
+                <label for="role">Job Role</label><br>
+                <select id="role" name="job role" >
+                    <option value="select">Select Job Role</option>
+                    <option value="FullStack Engineer">FullStack Engineer</option>
+                    <option value="FrontEnd Engineer">FrontEnd Engineer</option>
+                    <option value="BackEnd Engineer">BackEnd Engineer</option>
+                    <option value="Devops">Devops Engineer</option>
+                    <option value="UI/UX">UI/UX</option>
+                </select>
+                </div>
+                <div class="frms">
+                <label for="address">Address</label><br>
+                <textarea id="address" name="address" row="3" col="80" placeholder="Enter Address">
+                </textarea>
+                </div>
+                <div class="frms">
+                <label for="city">City</label><br>
+                <input type="text" id="city"  placeholder="Enter City">
+                </div>
+                <div class="frms">
+                <label for="pin">PinCode</label><br>
+                <input type="number" id="pin"  placeholder="Enter pincode">
+                </div>
+                <div class="frms">
+                <label for="date">Start Date</label><br>
+                <input type="date" id="date">
+                </div>
+                <div class="frms">
+                <label for="resume">Upload your CV/Resume</label><br>
+                <input type="file" id="resume"  placeholder="choose your CV">
+                </div>
+                </div>                
+            </form>
+                <div class="gallery-section">
+                    <h2>Dynamic Image Gallery</h2>
+                    <div class="gallery-input">
+                    <input type="text" id="imageURL" placeholder="Enter image URL" />
+                    <button  class="addimage" onclick="addImage()">Add Image</button>
+                </div>
+                <div class="gallery-display" id="gallery"></div>
+                <hr>
+                </div>
+                <div class="button_apply">
+                    <button type="button">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>     
+</div>
+<script src="task2.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="main">
+        <img src="LOGO.png" alt="Logo">
+        <div class="form">
+            <h2>Sign in or Create account</h2>
+           <form onsubmit="return loginUser(event)">
+    <label>Enter Name</label>
+    <input type="text" id="username" placeholder="Enter name" required><br>
+    <label>Enter Mobile Number</label>
+    <input type="number" id="mobile" placeholder="Enter mobile number" required>                
+    <button type="submit">Continue</button>
+</form>
+            <hr>
+            <p>By continuing, you agree to Jigzz's condition of use and privacy notice</p>
+        </div>
+        <hr>
+        <p>&copy;2025, Jigzz.com</p>
+    </div>
+
+    <script>
+        function loginUser(event) {
+        event.preventDefault(); // stop form from reloading page
+
+        let username = document.getElementById("username").value;
+        let mobile = document.getElementById("mobile").value;
+
+        if (username === "" || mobile === "") {
+            alert("Please enter all details");
+            return false;
+        }
+
+        // save in localStorage
+        localStorage.setItem("user", username);
+        localStorage.setItem("mobile", mobile);
+
+        alert("Login successful! Welcome " + username);
+        window.location.href = "index.html"; // redirect to homepage
+        return false;
+    }
+
+
+    </script>
+</body>
+</html>

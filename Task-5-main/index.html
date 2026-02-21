@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main">
+       <header>
+        <div class="logo">
+            <img src="LOGO.png">
+            <h2>Discover More. Pay Less.</h2>
+        </div>
+            <div class="searchInput">
+             <input type="text" id="searchInput" placeholder="Search for Products, Brands and more" autocomplete="off">
+            <button type="button" onclick="searchProducts()">Search</button>
+        </div>
+
+        <div class="right">
+            <div class="login">
+            <i class="ri-account-circle-fill"></i>
+            <button id="loginBtn"></button>
+            </div>
+            <div class="cart">
+            <i class="ri-shopping-cart-fill"></i>
+            <a href="cart.html" class="cart-link"><h2> View Cart(<span id="cartCount">0</span>)</h2></a>
+            </div>
+        </div>
+        </header>        
+    <div class="second">
+        <div onclick="renderProducts('mobile')" class="cat">
+            <img class="filter" src="mobile.png">
+            <p>Mobiles & Tablets</p>
+        </div>
+        <div onclick="renderProducts('fashion')" class="cat">
+            <img class="filter" src="fashion.png">
+            <p>Fashions</p>
+        </div>
+        <div onclick="renderProducts('electronics')" class="cat">
+            <img class="filter" src="electronic.png">
+            <p>Electronics</p>
+        </div>
+        <div onclick="renderProducts('furniture')" class="cat">
+            <img class="filter" src="furniture.png">
+            <p>Homes & Furniture</p>
+        </div>
+        <div onclick="renderProducts('tv')" class="cat">
+            <img class="filter" src="tv.jpg">
+            <p>TV & Appliances</p>
+        </div>
+        <div onclick="renderProducts('beauty')" class="cat">
+            <img class="filter" src="Beauty.png">
+            <p>Beauty/Food</p>
+        </div>
+        <div onclick="renderProducts('grocery')" class="cat">
+            <img class="filter" src="grocery.png">
+            <p>Grocery</p>
+        </div>
+    </div>
+    <div class="third">
+        <img class="gridd" src="main2.jpg">
+        <img class="gridd" src="main1.jpeg">
+        <img class="gridd" src="main3.jpg">         
+    </div>
+        <div class="product"></div>
+    </div>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

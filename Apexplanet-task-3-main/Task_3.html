@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz — 10 Questions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Task_3.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quiz(10 Qs)</h1>
+      <div class="meta">Questions: <span id="totalQs">10</span></div>
+    </header>
+
+    <main class="quiz-area">
+      <section class="left card">
+        <div class="question-head">
+          <div id="qNumber">Q1</div>
+          <div id="timer">20:00</div>
+        </div>
+
+        <div class="question" id="questionText">Loading question...</div>
+
+        <div class="options" id="options"></div>
+
+        <div class="controls">
+          <button id="nextBtn" class="btn primary">Next</button>
+          <button id="submitBtn" class="btn outline">Submit Quiz</button>
+          <button id="restartBtn" class="btn outline">Restart</button>
+        </div>
+
+        <div class="small tip">Tip: You have <strong>20 minutes</strong> total for the quiz.</div>
+      </section>
+
+      <aside class="right card panel">
+        <div class="small">Progress</div>
+        <div class="progress" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="counts">
+          <div>Answered: <span id="answered">0</span></div>
+          <div>Remaining: <span id="remaining">10</span></div>
+        </div>
+
+        <hr>
+
+        <div class="small">Live Score</div>
+        <div class="live-score" id="liveScore">0 / 10</div>
+
+        <hr>
+
+        <div class="small">Result Chart (Correct vs Incorrect)</div>
+        <canvas id="resultChart" width="300" height="240"></canvas>
+
+        <hr>
+
+        <div class="small">Past Attempts</div>
+        <ol id="pastAttempts" class="attempt-list"></ol>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Scores saved locally in your browser. Use <strong>Restart</strong> to try again.</p>
+    </footer>
+  </div>
+
+  <script src="Task_3.js"></script>
+</body>
+</html>
